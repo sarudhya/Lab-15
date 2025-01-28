@@ -14,8 +14,24 @@ int main(){
 	    shuffle(a,b,c,d);
 	    cout << a << " " << b << " " << c << " " << d << endl;
 	}
-	
+
 	return 0;
 }
 
 //Do not modify source code above this line
+
+void shuffle(int &a, int &b, int &c, int &d){
+	int x[] = {50,100,500,1000};
+		int first = rand()%4;
+		int second = rand()%4;
+		int third = rand()%4;
+		int fourth = rand()%4;
+	if(first == second) second = rand()%4;
+	if(second == third) third = rand()%4;
+	if(third == fourth) fourth = rand()%4;
+
+	a = x[first];
+	b = x[second];
+	c = x[third];
+	d = x[ fourth];
+}
